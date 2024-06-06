@@ -8,7 +8,114 @@
 <body>
 
 <h1>Reisebuchungs-Formular</h1>
-
-
+<form action="https://it.bzz.ch/demo/formdata/index.php">
+  <fieldset>
+    <legend>Abflug</legend>
+    <label>Abflughafen:
+      <select name="Abflughafen" size="5">
+        <optgroup label="Deutschland">
+          <option label="Berlin">Berlin</option>
+          <option label="Hamburg">Hamburg</option>
+          <option label="Frankfurt">Frankfurt</option>
+        </optgroup>
+        <optgroup label="Italien">
+          <option label="Rom">Rom</option>
+          <option label="Mailand">Mailand</option>
+          <option label="Venedig">Venedig</option>
+        </optgroup>
+        <optgroup label="Österreich">
+          <option label="Wien">Wien</option>
+          <option label="Salzburg ">Salzburg</option>
+          <option label="Innsbruck ">Innsbruck</option>
+        </optgroup>
+        <optgroup label="Frankreich">
+          <option label="Paris">Paris</option>
+          <option label="Nizza ">Nizza</option>
+          <option label="Lyon ">Lyon</option>
+        </optgroup>
+      </select>
+    </label>
+  </fieldset>
+  <fieldset>
+    <legend>Unterkunft</legend>
+    <input type="radio" id="Hotel" name="accomodation" value="Hotel">
+    <label for="Hotel">Hotel</label>
+    <input type="radio" id="Hostel" name="accomodation" value="Hostel">
+    <label for="Hostel">Hostel</label>
+    <input type="radio" id="Ferienwohnung" name="accomodation" value="Ferienwohnung" required>
+    <label for="Ferienwohnung">Ferienwohnung</label>
+  </fieldset>
+  <fieldset>
+    <legend>Zusätzliche Dienstleistungen</legend>
+    <input type="checkbox" name="services[]" id="check1" value="Reiseversicherung">
+    <label for="check1">Reiseversicherung</label>
+    <input type="checkbox" name="services[]" id="check2" value="Flughafentransfer">
+    <label for="check2">Flughafentransfer</label>
+    <input type="checkbox" name="services[]" id="check3" value="Zusätzliches Gepäck">
+    <label for="check3">Zusätzliches Gepäck</label>
+  </fieldset>
+  <fieldset>
+    <legend>Datum</legend>
+    <label for="anfang">Anfangszeitpunkt</label>
+    <input type="date" id="anfang" name="trip">
+    <br>
+    <label for="ende">Endzeitpunkt</label>
+    <input type="date" id="ende" name="trip">
+    <br>
+    <label for="number">Dauer in Tagen</label>
+    <input type="number" id="number" name="number" max="21" min="1" required>
+  </fieldset>
+  <fieldset>
+    <legend>Personen</legend>
+    <label for="people">Anzahl Personen</label>
+    <input type="number" id="people" name="person" required>
+  </fieldset>
+  <fieldset>
+    <legend>Fluggesellschaft</legend>
+    <label>
+      <select name="Fluggesellschaft" size="1">
+        <option></option>
+        <option>SwissAir</option>
+        <option>Edelweiss</option>
+        <option>RyanAir</option>
+      </select>
+    </label>
+  </fieldset>
+  <fieldset>
+    <legend>Zusätzliche Dienstleistungen</legend>
+    <input type="checkbox" id="check4" name="services2[]" value="Priority-Check-In">
+    <label for="check4">Priority-Check-In</label>
+    <input type="checkbox" id="check5" name="services2[]" value="Zusätzliches Handgepäck">
+    <label for="check5">Zusätzliches Handgepäck</label>
+    <input type="checkbox" id="check6" name="services2[]" value="Mietwagens">
+    <label for="check6">Mietwagens</label>
+  </fieldset>
+  <fieldset>
+    <legend>Reiseziel</legend>
+    <label> Ziel
+      <input type="search" list="Reiseziel" required>
+      <datalist id="Reiseziel">
+        <option value="Italien">
+        <option value="Deutschland">
+        <option value="Dubai">
+        <option value="Mallorca">
+        <option value="Malta">
+        <option value="Amerika">
+        <option value="Spanien">
+        <option value="Brasilien">
+        <option value="Nord Korea">
+      </datalist>
+    </label>
+    <button>finden!</button>
+  </fieldset>
+  <fieldset>
+    <legend>Kontakt</legend>
+    <label for="email">E-Mail</label>
+    <input type="email" name="email" id="email" required>
+  </fieldset>
+  <br>
+  <button type="submit">Buchen</button>
+  <button type="reset">Zurücksetzen</button>
+</form>
 </body>
 </html>
